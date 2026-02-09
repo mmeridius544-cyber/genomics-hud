@@ -1,0 +1,103 @@
+[
+  {
+    "variant_id": "rs429358",
+    "gene": "APOE",
+    "disease": "Alzheimer's Disease",
+    "impact_score": 87,
+    "predictions": {
+      "expression": {
+        "APOE": -0.87,
+        "TOMM40": -0.23
+      },
+      "chromatin": {
+        "astrocytes": -0.45,
+        "microglia": 0.02,
+        "neurons": 0.01
+      },
+      "splicing": {
+        "exon_skip": 0.12,
+        "cryptic_site": 0.08
+      },
+      "tf_binding": {
+        "CTCF": -0.67,
+        "SPI1": -0.12
+      }
+    },
+    "interpretation": "**Primary Mechanism**: Significant down-regulation of APOE expression mediated by chromatin remodeling in astrocytes.\n**Key Evidence**:\n- Predicted expression decrease of 0.87 Δ in the APOE promoter region.\n- High cell-type specificity (0.90) for astrocytes, suggesting localized CNS impact.\n- Disruption of CTCF binding sites indicates a loss of topological insulation.\n**Biological Impact**: Strong association with Late-Onset Alzheimer's Disease (LOAD) through impaired lipid transport.\n**Confidence**: High (Precomputed Validation)\n**Validation Recommendation**: Conduct ChIP-seq to verify disrupted CTCF recruitment in astrocytes.",
+    "cell_specificity": {
+      "astrocytes": 0.9,
+      "microglia": 0.1,
+      "neurons": 0.05
+    },
+    "contact_maps": {
+      "enhancer_promoter_loop_strength": -0.34
+    }
+  },
+  {
+    "variant_id": "rs129349",
+    "gene": "TCF7L2",
+    "disease": "Type 2 Diabetes",
+    "impact_score": 64,
+    "predictions": {
+      "expression": {
+        "TCF7L2": -0.42,
+        "ACSML": -0.05
+      },
+      "chromatin": {
+        "liver": -0.31,
+        "pancreas": -0.52,
+        "muscle": 0.02
+      },
+      "splicing": {
+        "exon_skip": 0.34,
+        "cryptic_site": 0.01
+      },
+      "tf_binding": {
+        "HNF4A": -0.45,
+        "FOXA2": -0.28
+      }
+    },
+    "interpretation": "**Primary Mechanism**: Moderate regulatory disruption of TCF7L2 expression via pancreatic-specific enhancer hijacking.\n**Key Evidence**:\n- 0.52 Δ shift in chromatin accessibility specifically in pancreatic islets.\n- Significant increase in exon-skipping (34%), potentially creating a non-functional isoform.\n- Reduced affinity for HNF4A transcription factor complex.\n**Biological Impact**: Increased risk of Type 2 Diabetes via impaired glucose-stimulated insulin secretion.\n**Confidence**: High (Precomputed Validation)\n**Validation Recommendation**: Perform Minigene assay to quantify exon-skipping ratio.",
+    "cell_specificity": {
+      "pancreas": 0.85,
+      "liver": 0.45,
+      "muscle": 0.1
+    },
+    "contact_maps": {
+      "enhancer_promoter_loop_strength": -0.56
+    }
+  },
+  {
+    "variant_id": "rs113488022",
+    "gene": "BRCA1",
+    "disease": "Breast Cancer",
+    "impact_score": 92,
+    "predictions": {
+      "expression": {
+        "BRCA1": -1.2,
+        "NBR2": -0.1
+      },
+      "chromatin": {
+        "breast_epithelium": -0.88,
+        "ovary": -0.42
+      },
+      "splicing": {
+        "exon_skip": 0.78,
+        "cryptic_site": 0.45
+      },
+      "tf_binding": {
+        "MYC": -0.72,
+        "E2F1": -0.54
+      }
+    },
+    "interpretation": "**Primary Mechanism**: Severe functional knockdown of BRCA1 via catastrophic splicing failure and promoter silencing.\n**Key Evidence**:\n- Extreme expression loss (-1.2 Δ) in breast epithelial tissue.\n- Massive exon-skipping (78%) predicted to cause a premature stop codon (PTC).\n- Disruption of the E2F1-mediated transcription hub.\n**Biological Impact**: Extremely high risk for Hereditary Breast and Ovarian Cancer (HBOC) syndrome.\n**Confidence**: High (Precomputed Validation)\n**Validation Recommendation**: Urgent mRNA-seq and protein quantification (Western Blot).",
+    "cell_specificity": {
+      "breast_epithelium": 0.95,
+      "ovary": 0.7,
+      "liver": 0.05
+    },
+    "contact_maps": {
+      "enhancer_promoter_loop_strength": -0.89
+    }
+  }
+]
